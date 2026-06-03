@@ -4,49 +4,104 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contacto - EcoForma</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <style>
-    .contact-container {
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      margin: 0;
+      background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), 
+                  url('https://picsum.photos/id/201/2000/1200') center/cover;
+      background-attachment: fixed;
+      color: white;
+    }
+    nav { 
+      position: fixed; 
+      width: 100%; 
+      background: rgba(255,255,255,0.95); 
+      backdrop-filter: blur(20px); 
+      z-index: 1000; 
+    }
+    .nav-content { 
+      max-width: 1200px; 
+      margin: 0 auto; 
+      padding: 1.3rem 2rem; 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+    }
+    .logo { 
+      font-size: 1.8rem; 
+      font-weight: 600; 
+      color: #111; 
+      text-decoration: none; 
+    }
+    .nav-links a { 
+      margin-left: 2.5rem; 
+      text-decoration: none; 
+      color: #333; 
+      font-weight: 500; 
+    }
+
+    section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 0 2rem;
+    }
+    .content {
       max-width: 700px;
       margin: 0 auto;
       text-align: center;
     }
-    .contact-info {
-      background: white;
-      padding: 60px 40px;
-      border-radius: 24px;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.08);
-      margin-top: 40px;
+    h1 { 
+      font-size: 3.8rem; 
+      margin-bottom: 2.5rem; 
     }
-    .social-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      background: #111;
-      color: white;
-      padding: 16px 32px;
+    .info {
+      font-size: 1.35rem;
+      line-height: 2.4;
+      margin-bottom: 3rem;
+    }
+    .info p { 
+      margin: 1rem 0; 
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 360px;
+      margin: 0 auto;
+    }
+    .btn {
+      padding: 16px 24px;
       border-radius: 50px;
       text-decoration: none;
+      font-weight: 600;
       font-size: 1.1rem;
-      font-weight: 500;
-      margin: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
       transition: all 0.3s;
     }
-    .social-btn:hover {
+    .btn-google {
+      background: #4285F4;
+      color: white;
+    }
+    .btn-apple {
+      background: white;
+      color: #111;
+      border: 2px solid #111;
+    }
+    .btn:hover {
       transform: scale(1.05);
-      background: #2e8b57;
-    }
-    .whatsapp {
-      background: #25D366;
-    }
-    .whatsapp:hover {
-      background: #1ebe5a;
     }
   </style>
 </head>
 <body>
-  <header>
-    <nav>
+  <nav>
+    <div class="nav-content">
       <a href="index.html" class="logo">EcoForma</a>
       <div class="nav-links">
         <a href="mision.html">Misión</a>
@@ -54,39 +109,33 @@
         <a href="valores.html">Valores</a>
         <a href="contacto.html">Contacto</a>
       </div>
-    </nav>
-  </header>
+    </div>
+  </nav>
 
-  <section class="section">
-    <h2>Contáctanos</h2>
-    
-    <div class="contact-container">
-      <p style="font-size: 1.35rem; margin-bottom: 50px; color: #444;">
-        ¿Quieres comprar, colaborar o llevar EcoForma a tu escuela?<br>
-        Estamos aquí para ayudarte.
-      </p>
+  <section>
+    <div class="content">
+      <h1>Contacto</h1>
+      <div class="info">
+        <p><strong>Rich Loyola</strong></p>
+        <p>📍 Reynosa, Tamaulipas, México</p>
+        <p>📧 ecoforma.contacto@gmail.com</p>
+        <p>📱 899 123 4567</p>
+      </div>
 
-      <div class="contact-info">
-        <h3 style="margin-bottom: 30px; font-size: 1.6rem;">Escríbenos</h3>
-        
-        <a href="https://wa.me/521XXXXXXXXXX" target="_blank" class="social-btn whatsapp">
-          💬 WhatsApp
+      <div class="buttons">
+        <a href="https://maps.google.com/?q=Tu+Dirección+Del+Bachillerato+En+Reynosa" target="_blank" class="btn btn-google">
+          <i class="fab fa-google"></i> Ver en Google Maps
         </a>
-        
-        <a href="https://instagram.com/ecoforma.mx" target="_blank" class="social-btn">
-          📷 Instagram
+        <a href="https://maps.apple.com/?q=Tu+Dirección+Del+Bachillerato+En+Reynosa" target="_blank" class="btn btn-apple">
+          <i class="fa-brands fa-apple"></i> Ver en Apple Maps
         </a>
       </div>
 
-      <p style="margin-top: 50px; color: #666; font-size: 1.1rem;">
-        También puedes enviarnos un mensaje directo por Instagram o WhatsApp.<br>
-        Respondemos rápido 😊
+      <p style="margin-top: 3rem; font-size: 1.1rem; opacity: 0.9;">
+        ¿Quieres llevar EcoForma a tu escuela?<br>
+        Escríbenos y hagamos el cambio juntos.
       </p>
     </div>
   </section>
-
-  <footer>
-    <p>&copy; 2026 EcoForma • Proyecto de Bachillerato</p>
-  </footer>
 </body>
 </html>
