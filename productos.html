@@ -4,49 +4,99 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Productos - EcoForma</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <style>
-    .products-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 40px;
-      max-width: 1280px;
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      margin: 0;
+      background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), 
+                  url('https://picsum.photos/id/866/2000/1200') center/cover;
+      background-attachment: fixed;
+      color: white;
+    }
+    nav { 
+      position: fixed; 
+      width: 100%; 
+      background: rgba(255,255,255,0.95); 
+      backdrop-filter: blur(20px); 
+      z-index: 1000; 
+    }
+    .nav-content { 
+      max-width: 1200px; 
+      margin: 0 auto; 
+      padding: 1.3rem 2rem; 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+    }
+    .logo { 
+      font-size: 1.8rem; 
+      font-weight: 600; 
+      color: #111; 
+      text-decoration: none; 
+    }
+    .nav-links a { 
+      margin-left: 2.5rem; 
+      text-decoration: none; 
+      color: #333; 
+      font-weight: 500; 
+    }
+
+    section {
+      min-height: 100vh;
+      padding: 140px 2rem 100px;
+      max-width: 1200px;
       margin: 0 auto;
     }
-    .product-card {
-      background: white;
-      border-radius: 20px;
+    h1 { 
+      font-size: 3.8rem; 
+      text-align: center; 
+      margin-bottom: 4rem; 
+    }
+    
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 3rem;
+    }
+    .product {
+      background: rgba(255,255,255,0.95);
+      color: #111;
+      border-radius: 24px;
       overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-      transition: all 0.4s ease;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+      transition: transform 0.3s;
     }
-    .product-card:hover {
-      transform: translateY(-12px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+    .product:hover {
+      transform: translateY(-10px);
     }
-    .product-card img {
+    .product img {
       width: 100%;
-      height: 380px;
+      height: 340px;
       object-fit: cover;
     }
     .product-info {
-      padding: 24px;
+      padding: 2rem;
       text-align: center;
     }
-    .product-info h3 {
-      font-size: 1.4rem;
-      font-weight: 600;
-      margin-bottom: 8px;
+    .product-info h3 { 
+      margin-bottom: 0.6rem; 
+      font-size: 1.5rem;
     }
     .product-info p {
       color: #555;
-      font-size: 1.05rem;
+      margin-bottom: 1rem;
+    }
+    .price {
+      font-size: 1.4rem;
+      color: var(--green);
+      font-weight: 600;
     }
   </style>
 </head>
 <body>
-  <header>
-    <nav>
+  <nav>
+    <div class="nav-content">
       <a href="index.html" class="logo">EcoForma</a>
       <div class="nav-links">
         <a href="mision.html">Misión</a>
@@ -54,69 +104,44 @@
         <a href="valores.html">Valores</a>
         <a href="contacto.html">Contacto</a>
       </div>
-    </nav>
-  </header>
+    </div>
+  </nav>
 
-  <section class="section">
-    <h2>Nuestra Colección</h2>
-    <p style="text-align: center; max-width: 700px; margin: 0 auto 60px; font-size: 1.35rem; color: #555;">
-      6 piezas únicas hechas 100% con plástico PET recolectado en escuelas.<br>
-      Diseño moderno • Ultraligeros • Huella ambiental positiva
-    </p>
-
-    <div class="products-grid">
-      <div class="product-card">
-        <img src="img/producto1.jpg" alt="Aretes Minimal">
+  <section>
+    <h1>Nuestros Productos</h1>
+    <div class="product-grid">
+      
+      <!-- Producto 1 - $50 -->
+      <div class="product">
+        <img src="https://picsum.photos/id/201/600/600" alt="Aretes Elegantes">
         <div class="product-info">
-          <h3>Minimal</h3>
-          <p>Estilo geométrico limpio</p>
+          <h3>Aretes Elegantes</h3>
+          <p>Diseños con perlas, flores y cristales</p>
+          <strong class="price">$50 MXN</strong>
         </div>
       </div>
 
-      <div class="product-card">
-        <img src="img/producto2.jpg" alt="Aretes Círculo">
+      <!-- Producto 2 - $45 -->
+      <div class="product">
+        <img src="https://picsum.photos/id/237/600/600" alt="Aretes Delicados">
         <div class="product-info">
-          <h3>Círculo Iridiscente</h3>
-          <p>Efecto tornasol</p>
+          <h3>Aretes Delicados</h3>
+          <p>Modelos con perlas y detalles plateados</p>
+          <strong class="price">$45 MXN</strong>
         </div>
       </div>
 
-      <div class="product-card">
-        <img src="img/producto3.jpg" alt="Aretes Triángulo">
+      <!-- Producto 3 - $55 -->
+      <div class="product">
+        <img src="https://picsum.photos/id/866/600/600" alt="Aretes Premium">
         <div class="product-info">
-          <h3>Triángulo</h3>
-          <p>Líneas contemporáneas</p>
+          <h3>Aretes Premium</h3>
+          <p>Diseños con corazones, mariquitas y formas modernas</p>
+          <strong class="price">$55 MXN</strong>
         </div>
       </div>
 
-      <div class="product-card">
-        <img src="img/producto4.jpg" alt="Aretes Oval">
-        <div class="product-info">
-          <h3>Oval Orgánico</h3>
-          <p>Forma suave y natural</p>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <img src="img/producto5.jpg" alt="Aretes Cuadrado">
-        <div class="product-info">
-          <h3>Cuadrado Texturizado</h3>
-          <p>Diseño bold</p>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <img src="img/producto6.jpg" alt="Aretes Luna">
-        <div class="product-info">
-          <h3>Luna</h3>
-          <p>Edición especial</p>
-        </div>
-      </div>
     </div>
   </section>
-
-  <footer>
-    <p>&copy; 2026 EcoForma • Proyecto de Bachillerato</p>
-  </footer>
 </body>
 </html>
